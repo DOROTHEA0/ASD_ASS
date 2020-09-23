@@ -13,8 +13,8 @@ public class Test {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-            User u = new User(null, "admin fname", "admin lname", "2020-01-01", "admin@email", "1000000000", "admin", true);
-            UserDao.updateUser(u);
+            User u = new User(null, "Huan", "Guo", "1919-01-01", "Guohuan@email", "13803455682", "chesternb", true);
+            UserDao.addUser(u);
             
             
             

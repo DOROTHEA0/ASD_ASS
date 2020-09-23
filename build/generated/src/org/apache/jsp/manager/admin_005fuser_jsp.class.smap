@@ -1,0 +1,14 @@
+SMAP
+admin_005fuser_jsp.java
+JSP
+*S JSP
+*F
++ 0 admin_user.jsp
+manager/admin_user.jsp
++ 1 admin_menu.jsp
+manager/admin_menu.jsp
+*L
+5,4:49
+5#1,50:52
+8#0,83:101
+*E
