@@ -10,13 +10,14 @@ public class User {
 	private String PhoneNumber;
 	private String Password;
 	private Boolean IsAdmin;
+        private Boolean IsActive;
 	
 	public User() {
 		super();
 	}
 
 	public User(String id, String firstName, String lastName, String dOB,
-			String email, String phoneNumber, String password, Boolean isAdmin) {
+			String email, String phoneNumber, String password, Boolean isAdmin, Boolean isActive) {
 		super();
 		this.id = id;
 		FirstName = firstName;
@@ -26,6 +27,7 @@ public class User {
 		PhoneNumber = phoneNumber;
 		Password = password;
 		IsAdmin = isAdmin;
+                IsActive = isActive;
 	}
 
 	public String getId() {
@@ -90,5 +92,13 @@ public class User {
 
 	public void setIsAdmin(Boolean isAdmin) {
 		IsAdmin = isAdmin;
+	}
+        
+        public Boolean getIsActive() {
+		return IsActive;
+	}
+
+	public void setIsActive(Boolean isAdmin) {
+		IsActive = IsActive;
 	}
 }

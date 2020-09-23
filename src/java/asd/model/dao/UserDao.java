@@ -39,7 +39,8 @@ public class UserDao {
                 .append("Email", user.getEmail())
                 .append("PhoneNumber", user.getPhoneNumber())
                 .append("Password", ciphertext)
-                .append("IsAdmin", user.getIsAdmin());
+                .append("IsAdmin", user.getIsAdmin())
+                .append("IsActive", user);
         
         MongoDatabase db = BaseDAO.getConn();
         MongoCollection userColl = db.getCollection("User");
@@ -84,7 +85,8 @@ public class UserDao {
                     ,userDocument.getString("Email")
                     ,userDocument.getString("PhoneNumber")
                     ,plaintext
-                    ,userDocument.getBoolean("IsAdmin"));
+                    ,userDocument.getBoolean("IsAdmin")
+                    ,userDocument.getBoolean("IsActive"));
             users.add(user);
         }
         return users;
@@ -113,7 +115,8 @@ public class UserDao {
                         ,userDocument.getString("Email")
                         ,userDocument.getString("PhoneNumber")
                         ,plaintext
-                        ,userDocument.getBoolean("IsAdmin"));
+                        ,userDocument.getBoolean("IsAdmin")
+                        ,userDocument.getBoolean("IsActive"));
         }
         return resultUser;
     }
@@ -142,7 +145,8 @@ public class UserDao {
                         ,userDocument.getString("Email")
                         ,userDocument.getString("PhoneNumber")
                         ,plaintext
-                        ,userDocument.getBoolean("IsAdmin"));
+                        ,userDocument.getBoolean("IsAdmin")
+                        ,userDocument.getBoolean("IsActive"));
         }
         return resultUser;
     }
